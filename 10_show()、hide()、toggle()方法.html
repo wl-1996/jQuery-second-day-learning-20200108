@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toggle() hide() toggle()方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            width: 960px;
+            height: 40px;
+            border: 1px solid red;
+            margin: 50px auto;
+        }
+
+        .nav ul {
+            list-style: none;
+            height: 40px;
+        }
+
+        .nav ul li {
+            float: left;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: yellowgreen;
+            position: relative;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav ul li .dropbox {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 180px;
+            display: none;
+            padding-top: 10px;
+        }
+
+        .nav ul li .dropbox .inner {
+            background: #ccc;
+        }
+
+        .nav ul li .dropbox .inner a {
+            display: block;
+            text-align: left;
+        }
+
+        .nav ul li .dropbox .inner a:hover {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="">栏目名称</a></li>
+        <li>
+            <a href="">公司新闻</a>
+            <div class="dropbox">
+                <div class="inner">
+                    <p><a href="">北京总部新闻</a></p>
+                    <p><a href="">上海分公司新闻</a></p>
+                    <p><a href="">东莞分公司新闻</a></p>
+                    <p><a href="">辽宁分公司新闻</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="">栏目名称</a>
+            <div class="dropbox">
+                <div class="inner">
+                    <p><a href="">2011财务</a></p>
+                    <p><a href="">2012财务</a></p>
+                    <p><a href="">2013财务</a></p>
+                    <p><a href="">2014财务</a></p>
+                    <p><a href="">2015财务</a></p>
+                    <p><a href="">2016财务</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="">栏目名称</a>
+            <div class="dropbox">
+                <div class="inner">
+                    <p><a href="">2011财务</a></p>
+                    <p><a href="">2012财务</a></p>
+                    <p><a href="">2013财务</a></p>
+                    <p><a href="">2014财务</a></p>
+                    <p><a href="">2015财务</a></p>
+                    <p><a href="">2016财务</a></p>
+                </div>
+            </div>
+
+        </li>
+        <li><a href="">栏目名称</a></li>
+        <li><a href="">栏目名称</a></li>
+        <li><a href="">栏目名称</a></li>
+        <li><a href="">栏目名称</a></li>
+    </ul>
+</div>
+
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    $("li").mouseenter(function () {
+        //碰到那个li，就让该li的儿子.dropbox展开
+        $(this).children(".dropbox").slideDown()
+    })
+
+    $("li").mouseleave(function () {
+        //碰到那个li，就让该li的儿子.dropbox展开
+        $(this).children(".dropbox").slideUp()
+    })
+</script>
+</body>
+</html>
