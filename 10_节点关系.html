@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点关系</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            width: 60px;
+            height: 60px;
+            background: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p id="xiaoming">xiaoming</p>
+<p></p>
+<p></p>
+<p></p>
+
+<!--<script>-->
+<!--    let xiaoming = document.getElementById("xiaoming")-->
+
+<!--    let prev = xiaoming;-->
+<!--    while (prev = prev.previousSibling) {-->
+<!--        if (!prev) {-->
+<!--            break;-->
+<!--        }-->
+<!--        //如果小明的上一个兄弟节点是元素节点,就...-->
+<!--        if (prev.nodeType == 1) {-->
+<!--            prev.style.background = "red";-->
+<!--        }-->
+<!--    }-->
+
+<!--    let next = xiaoming-->
+<!--    while (next = next.nextSibling) {-->
+<!--        if (!next) {-->
+<!--            break;-->
+<!--        }-->
+<!--        //如果小明的上一个兄弟节点是元素节点,就...-->
+<!--        if (next.nodeType == 1) {-->
+<!--            next.style.background = "yellow";-->
+<!--        }-->
+<!--    }-->
+
+<!--</script>-->
+
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    let $haha = $("#xiaoming").prevAll()
+    console.log($haha)
+    $haha.animate({"width": 400}, 1000)
+</script>
+</body>
+</html>
