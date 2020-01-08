@@ -5,9 +5,72 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>delat()方法</title>
+    <title>delay()方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*div {*/
+        /*    width: 80px;*/
+        /*    height: 80px;*/
+        /*    position: absolute;*/
+        /*    left: 100px;*/
+        /*    top: 100px;*/
+        /*    background: blue;*/
+        /*}*/
+
+        img {
+            width: 300px;
+            position: absolute;
+            display: none;
+        }
+
+        .no0 {
+            top: 111px;
+            left: 111px;
+        }
+
+        .no1 {
+            top: 231px;
+            left: 451px;
+        }
+
+        .no2 {
+            top: 127px;
+            left: 251px;
+        }
+
+        .no3 {
+            top: 337px;
+            left: 51px;
+        }
+
+        .no4 {
+            top: 37px;
+            left: 234px;
+        }
+    </style>
 </head>
 <body>
+<!--<div></div>-->
 
+<img src="./images/0.jpg" alt="" class="no0">
+<img src="./images/1.jpg" alt="" class="no1">
+<img src="./images/2.jpg" alt="" class="no2">
+<img src="./images/3.jpg" alt="" class="no3">
+<img src="./images/4.jpg" alt="" class="no4">
+
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    // $("div").delay(1000).animate({"left":600},1000)
+    // $("div").delay(1000).hide(1)
+
+    $("img").each(function (i) {
+        $(this).delay(i * 1000).fadeIn(1000)
+    })
+
+</script>
 </body>
 </html>
