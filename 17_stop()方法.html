@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stop()方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background: orange;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="stop()">
+<input type="button" value="stop(true)">
+<input type="button" value="stop(true,true)">
+<input type="button" value="stop(false,true)">
+<div></div>
+
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    $("div").animate({"left":800},2000)
+    $("div").animate({"top":300},2000)
+    $("div").animate({"left":100},2000)
+    $("div").animate({"top":100},2000)
+
+    $("input:eq(0)").click(function () {
+        $("div").stop()
+        console.log(1)
+    })
+    $("input:eq(1)").click(function () {
+        $("div").stop(true)
+    })
+    $("input:eq(2)").click(function () {
+        $("div").stop(true,true)
+    })
+    $("input:eq(3)").click(function () {
+        $("div").stop(false,true)
+    })
+</script>
+</body>
+</html>

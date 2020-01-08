@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stop()可以用来防止动画的积累</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            margin-top: 100px;
+            left: 0;
+            top: 0;
+            background: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" value="到100">
+<input type="button" value="到900">
+
+<div></div>
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    $("input:eq(0)").click(function(){
+        $("div").stop(true).animate({"left":100},2000)
+    })
+    $("input:eq(1)").click(function(){
+        $("div").stop(true).animate({"left":900},2000)
+    })
+</script>
+</body>
+</html>

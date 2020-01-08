@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fadeIn fadeOut fadeTo fadeToggle 方法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background: yellowgreen;
+            opacity: 1
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="按我">
+<div></div>
+
+<script src="./jquery-1.12.3.min.js"></script>
+<script>
+    $("input").click(function () {
+        $("div").fadeToggle(1000)
+    })
+</script>
+</body>
+</html>
